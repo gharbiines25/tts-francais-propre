@@ -1,0 +1,16 @@
+{
+  "audio": {
+    "sample_rate": 22050
+  },
+  "espeak": {
+    "voice": "fr"
+  },
+  "phoneme_type": "espeak",
+  "num_symbols": 256,
+  "num_speakers": 1,
+  "inference": {
+    "noise_scale": 0.667,
+    "length_scale": 1.0,
+    "noise_w": 0.8
+  }
+}

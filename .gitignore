@@ -1,0 +1,22 @@
+# Ignore des fichiers temporaires
+__pycache__/
+*.pyc
+*.pyo
+*.log
+
+# Cache d'entraînement
+training/cache/
+training/lightning_logs/
+
+# Fichiers de test générés
+evaluation/*.wav
+evaluation/results/
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
