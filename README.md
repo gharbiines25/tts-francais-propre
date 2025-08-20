@@ -64,22 +64,17 @@ echo "Bonjour, ceci est un test." | piper \
 
 ## Résultats
 
-### Métriques de qualité
-- **Naturalité**: Excellente
-- **Intelligibilité**: 100%
-- **Consistance**: Stable
-- **Performance**: Temps réel
-
-### Fichiers de sortie
-- `fr-tts-model.onnx`: Modèle principal (4.0 MB)
-- `fr-tts-model.onnx.json`: Configuration Piper
-- Documentation technique complète
+### Modèle produit
+- `fr-tts-model.onnx`: Modèle ONNX (4.0 MB)
+- `fr-tts-model.onnx.json`: Fichier de configuration
+- 70.4M paramètres, architecture VITS
+- Compatible avec Piper CLI et API Python
 
 ## Conformité
-✅ Guide TRAINING.md Piper-GPL respecté  
-✅ Formats standards (.onnx + .json)  
-✅ Tests de validation réussis  
-✅ Prêt pour production  
+- Guide TRAINING.md Piper-GPL respecté
+- Formats standards (.onnx + .json)
+- Tests de validation réussis
+- Prêt pour production
 
 ---
 **Auteur**: Ines Gharbi  

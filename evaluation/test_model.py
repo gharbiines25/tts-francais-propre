@@ -9,7 +9,7 @@ from pathlib import Path
 
 def test_model_basic():
     """Test de base du modèle"""
-    print("🧪 Test de base du modèle...")
+    print("Test de base du modèle...")
     
     test_phrases = [
         "Bonjour, comment allez-vous ?",
@@ -22,7 +22,7 @@ def test_model_basic():
     config_path = "../model/fr-tts-model.onnx.json"
     
     if not Path(model_path).exists():
-        print("❌ Modèle non trouvé")
+        print("Erreur: Modèle non trouvé")
         return False
     
     results = []
@@ -56,7 +56,7 @@ def test_model_basic():
                 "duration": duration,
                 "file_size": file_size
             })
-            print(f"✅ Test {i+1}: {duration:.2f}s, {file_size} bytes")
+            print(f"Test {i+1} réussi: {duration:.2f}s, {file_size} bytes")
             
         except subprocess.CalledProcessError as e:
             results.append({
@@ -64,13 +64,13 @@ def test_model_basic():
                 "success": False,
                 "error": str(e)
             })
-            print(f"❌ Test {i+1}: Échec")
+            print(f"Test {i+1} échoué")
     
     return results
 
 def generate_test_report(results):
     """Génère un rapport de test"""
-    print("\n📊 Rapport de test")
+    print("\nRapport de test")
     print("=" * 50)
     
     total_tests = len(results)
@@ -85,10 +85,10 @@ def generate_test_report(results):
         print(f"Temps moyen: {avg_duration:.2f}s")
         print(f"Taille moyenne: {avg_size:.0f} bytes")
     
-    print("\n✅ Tests terminés")
+    print("\nTests terminés")
 
 if __name__ == "__main__":
-    print("🧪 Tests du modèle TTS français")
+    print("Tests du modèle TTS français")
     print("=" * 50)
     
     results = test_model_basic()

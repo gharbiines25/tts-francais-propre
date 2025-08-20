@@ -37,15 +37,15 @@ def train_model():
         "--data.batch_size", str(config["batch_size"])
     ]
     
-    print("🚀 Démarrage de l'entraînement...")
+    print("Démarrage de l'entraînement...")
     print(f"Configuration: {config}")
     
     try:
         subprocess.run(cmd, check=True)
-        print("✅ Entraînement terminé avec succès")
+        print("Entraînement terminé avec succès")
         return True
     except subprocess.CalledProcessError as e:
-        print(f"❌ Erreur pendant l'entraînement: {e}")
+        print(f"Erreur pendant l'entraînement: {e}")
         return False
 
 def export_model():
@@ -60,18 +60,18 @@ def export_model():
         "--output-file", output_path
     ]
     
-    print("📦 Export du modèle vers ONNX...")
+    print("Export du modèle vers ONNX...")
     
     try:
         subprocess.run(cmd, check=True)
-        print(f"✅ Modèle exporté: {output_path}")
+        print(f"Modèle exporté: {output_path}")
         return True
     except subprocess.CalledProcessError as e:
-        print(f"❌ Erreur pendant l'export: {e}")
+        print(f"Erreur pendant l'export: {e}")
         return False
 
 if __name__ == "__main__":
-    print("🎤 Entraînement du modèle TTS français")
+    print("Entraînement du modèle TTS français")
     print("=" * 50)
     
     # Entraînement
@@ -79,4 +79,4 @@ if __name__ == "__main__":
         # Export si entraînement réussi
         export_model()
     else:
-        print("❌ Échec de l'entraînement")
+        print("Échec de l'entraînement")
